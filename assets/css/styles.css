@@ -1,0 +1,21 @@
+/* Variables */
+/* con root podemos declarar variables para usar en los estilos de nuestros css  */
+:root {
+  --darkBlue: #0a3871;
+  --gray: #e5e5e5;
+  --lightBlue: #f3f5fc;
+  --graySecondary: #495057;
+  --grayTerceario: #343a40;
+  --white: #fff;
+  --blueDarkSecondary: #67808e;
+}
+/* Selectores */
+* {
+  box-sizing: border-box;
+}
+/* Body */
+body {
+  font-size: 3vw;
+  background-color: var(--colorPrincipal);
+}
+/* Header Logo */
