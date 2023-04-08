@@ -10,45 +10,54 @@
 
     <!-- MiPropioEstilo -->
 
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
     <title>Encryptor Code</title>
   </head>
 
   <body>
     <!-- Header -->
     <header>
-      <img src="" alt="Logo Alura" />
+      <div class="contenedorHeader">
+      <img src="./assets/img/Vector.png" alt="Logo Alura" />
+      </div>
     </header>
     <!-- Cuerpo -->
     <main>
       <!-- desencriptador -->
       <section class="contenedores">
         <!-- TextoDeEntrada -->
-        <textarea id="textoEntrada"></textarea>
+        <input class="frame2" id="textoEntrada" placeholder="ingrese el texto que quiere encriptar" type="text" ></input>
+        <p id="mensaje" class="mensaje">El campo del desencriptador está vacío.</p>
+
         <!-- ContenedorDeBotones -->
-        <div id="cajaBotones">
-          <button id="btn-encriptar" class="botones">Encriptar</button>
-          <button id="btn-descencriptar" class="botones">Desencriptar</button>
+        <div id="cajaBotones" class="cajaBotones">
+          <button onclick="btnEncriptar()" id="btn-encriptar" class="botones">Encriptar</button>
+          <button onclick="btnDesencriptar()" id="btn-descencriptar" class="botones">Desencriptar</button>
         </div>
       </section>
       <!-- encriptador -->
       <section class="contenedores">
         <!-- textoEncriptado -->
         <textarea id="textoSalida"></textarea>
+        <img class="muñeco" src="./assets/img/Muñeco.png" alt="">
         <!-- Textos -->
+        <div class="frameTextos">
         <h3>Ningun mensaje fue encontrado</h3>
         <p>Ingresa el texto que desea encriptar o desencriptar</p>
+      </div>
         <!-- BotonCopiar -->
         <button id="btn-copiar" class="botones">Copiar</button>
       </section>
     </main>
-    <script src="./assets/js/script.js"></script>
+
     <!-- Footer -->
     <footer>
+       <span>Copyright Edgar J Tribaldo</span>
       <!-- RedesSociales -->
       <a href=""></a>
       <a href=""></a>
       <a href=""></a>
     </footer>
+    <script src="./assets/js/scripts.js"></script>
   </body>
 </html>
