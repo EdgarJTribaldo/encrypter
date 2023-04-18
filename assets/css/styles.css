@@ -10,241 +10,48 @@
   --blueDarkSecondary: #67808e;
 }
 /* Selectores */
+
 * {
-  box-sizing: border-box;
+  background: var(--lightBlue);
 }
 
-body {
-  background-color: #f3f5fc;
+.text-area {
+  height: 50%;
+  margin: 2% auto 0;
+  display: inline-block;
+  font-size: 32px;
+  color: var(--darkBlue);
+  border: none;
+  background-color: var(--lightBlue);
+  resize: none;
+  transition: 1s;
 }
 
-header {
-  background: papayawhip;
+textarea:focus {
+  outline: none !important;
 }
 
-.contenedorHeader {
-  width: 1440px;
-  margin: 0 auto;
-  padding: 20px;
+::placeholder {
+  color: var(--darkBlue);
+  opacity: 0.5;
 }
 
 main {
-  position: relative;
-  width: 1440px;
-  height: 1024px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 30px;
-}
-
-.contenedores {
-  margin: 0 auto;
-}
-
-.contenedores:first-child {
-  width: 50%;
-}
-
-.contenedores:last-child {
-  position: absolute;
-  background-color: white;
-  width: 400px;
-  height: 944px;
-  left: 1000px;
-  top: 40px;
-  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.008);
+  float: right;
+  background-color: var(--backgroundMensajes);
+  /*display: inline-block;*/
+  text-align: center;
+  width: 35%;
+  height: 90%;
+  vertical-align: top;
+  margin: 0 1.5%;
+  padding: 30px 20px;
+  box-sizing: border-box;
   border-radius: 32px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 1s;
 }
 
-.frame2 {
-  position: absolute;
-  width: 577px;
-  height: 48px;
-  left: 240px;
-  top: 168px;
-}
-
-.muñeco {
-  position: absolute;
-  width: 336px;
-  height: 304px;
-  left: 1032px;
-  top: 283px;
-}
-
-.frameTextos {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 16px;
-  position: absolute;
-  width: 336px;
-  height: 122px;
-  left: 1032px;
-  top: 619px;
-}
-
-h3 {
-  width: 336px;
-  height: 58px;
-  font-weight: 700;
-  text-align: center;
-  color: #343a40;
-  flex: none;
-  order: 0;
-  align-items: stretch;
-  flex-grow: 0;
-}
-
-.cajaBotones {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 24px;
-
-  position: absolute;
-  width: 680px;
-  height: 67px;
-  left: 240px;
-  top: 885px;
-}
-
-div.cajaBotones button:first-child {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 24px;
-  gap: 8px;
-
-  width: 328px;
-  height: 67px;
-
-  /* Dark blue/dark-blue-300 */
-  background: #0a3871;
-  border-radius: 24px;
-
-  /* Inside auto layout */
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-
-div.cajaBotones button:last-child {
-  box-sizing: border-box;
-
-  /* Auto layout */
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 24px;
-  gap: 8px;
-
-  width: 328px;
-  height: 67px;
-
-  /* Light gray */
-  background: #d8dfe8;
-
-  /* Dark blue/dark-blue-300 */
-  border: 1px solid #0a3871;
-  border-radius: 24px;
-
-  /* Inside auto layout */
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-}
-
-#btn-encriptar {
-  width: 280px;
-  height: 19px;
-
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  text-align: center;
-
-  /* White */
-  color: #ffffff;
-
-  /* Inside auto layout */
-  flex: none;
-  order: 0;
-  flex-grow: 1;
-}
-
-#btn-desencriptar {
-  width: 280px;
-  height: 19px;
-
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  text-align: center;
-
-  /* White */
-  color: #ffffff;
-
-  /* Inside auto layout */
-  flex: none;
-  order: 0;
-  flex-grow: 1;
-}
-
-#btn-copiar {
-  box-sizing: border-box;
-
-  /* Auto layout */
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 24px;
-  gap: 8px;
-
-  position: absolute;
-  width: 336px;
-  height: 67px;
-  left: 1032px;
-  top: 885px;
-
-  /* Dark blue/dark-blue-300 */
-  border: 1px solid #0a3871;
-  border-radius: 24px;
-}
-
-input {
-  width: 100%;
-  height: 100%;
-  user-select: none;
-  color: black;
-  font-size: 30px;
-  border: none;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-.frame2:focus,
-.frame2:active {
-  outline-color: green;
-}
-/* Contenido del footer */
-footer {
-  font-weight: bold;
-  padding: 50px;
-  text-align: center;
-}
-
-.rojo {
-  border: 1px solid red; /* Establece el borde rojo */
-}
-
-.mensaje {
-  color: red; /* Establece el color de texto en rojo */
-  display: none; /* Oculta el mensaje por defecto */
+main img {
+  width: 80%;
 }

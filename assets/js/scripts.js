@@ -57,6 +57,11 @@ function btnDesencriptar(){
     textoOriginal.value = "";
 }
 
+function btnCopiar(){
+    const textoCopiado = clave.value;
+    this.value = textoCopiado;
+    textoOriginal.value = this.value;
+}
 
 function encriptar(stringEncriptada){
     // Creando una matriz de las letras a encriptar
