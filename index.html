@@ -28,33 +28,32 @@
   <body>
     <!-- Header -->
     <header>
-      <div class="contenedorHeader">
-        <img src="./assets/img/Vector.png" alt="Logo Alura" />
-      </div>
+      <img class="logo" src="./assets/img/Vector.png" alt="Logo Alura" />
     </header>
     <!-- Cuerpo -->
     <main>
       <!-- desencriptador -->
-      <section class="contenedores">
-        <!-- TextoDeEntrada -->
-        <textarea
-          class="text-area"
-          id="textoEntrada"
-          placeholder="ingrese el texto que quiere encriptar"
-          cols="35"
-          rows="10"
-        >
-        </textarea>
-        <p id="mensaje" class="mensaje">
-          El campo del desencriptador está vacío.
-        </p>
-
-        <div>
+      <section class="seccion1">
+        <div class="contenedorCajaTexto">
+          <!-- TextoDeEntrada -->
+          <textarea
+            class="text-area"
+            id="textoEntrada"
+            placeholder="ingrese el texto que quiere encriptar"
+            cols="35"
+            rows="10"
+          >
+          </textarea>
+        </div>
+        <div class="alerta">
+          <p id="mensaje" class="mensaje">
+            El campo del desencriptador está vacío.
+          </p>
+          <img src="/assets/img/alerta.svg" alt="alerta" />
           <h6 class="informacion">Solo letras minisculas y sin acento</h6>
         </div>
-
         <!-- ContenedorDeBotones -->
-        <div id="cajaBotones" class="cajaBotones">
+        <div id="cajaBotones" class="contenedorBotones">
           <button onclick="btnEncriptar()" id="btn-encriptar" class="botones">
             Encriptar
           </button>
@@ -68,7 +67,10 @@
         </div>
       </section>
       <!-- encriptador -->
-      <section class="contenedores">
+      <section class="seccion2">
+        <div class="contenedorMuneco">
+          <img src="/assets/img/Muñeco.png" alt="muneco" />
+        </div>
         <!-- textoEncriptado -->
         <textarea
           class="text-area"
@@ -79,10 +81,13 @@
         <!-- Textos -->
         <div class="frameTextos">
           <h3>Ningun mensaje fue encontrado</h3>
-          <p>Ingresa el texto que desea encriptar o desencriptar</p>
+          <p>
+            Ingresa el texto que desea encriptar o <br />
+            desencriptar
+          </p>
         </div>
         <!-- BotonCopiar -->
-        <div>
+        <div class="contenedorr-copiar">
           <button onclick="btnCopiar()" id="btn-copiar">Copiar</button>
         </div>
       </section>
