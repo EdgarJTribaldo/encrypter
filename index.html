@@ -31,13 +31,13 @@
       <img class="logo" src="./assets/img/Vector.png" alt="Logo Alura" />
     </header>
     <!-- Cuerpo -->
-    <main>
+    <main class="mainDiv">
       <!-- desencriptador -->
       <section class="seccion1">
         <div class="contenedorCajaTexto">
           <!-- TextoDeEntrada -->
           <textarea
-            class="text-area"
+            class="cajaTexto"
             id="textoEntrada"
             placeholder="ingrese el texto que quiere encriptar"
             cols="35"
@@ -45,10 +45,10 @@
           >
           </textarea>
         </div>
+        <p id="mensaje" class="mensaje">
+          El campo del desencriptador está vacío.
+        </p>
         <div class="alerta">
-          <p id="mensaje" class="mensaje">
-            El campo del desencriptador está vacío.
-          </p>
           <img src="/assets/img/alerta.svg" alt="alerta" />
           <h6 class="informacion">Solo letras minisculas y sin acento</h6>
         </div>
@@ -60,7 +60,7 @@
           <button
             onclick="btnDesencriptar()"
             id="btn-descencriptar"
-            class="botones"
+            class="btnDesencriptar"
           >
             Desencriptar
           </button>
@@ -68,27 +68,32 @@
       </section>
       <!-- encriptador -->
       <section class="seccion2">
-        <div class="contenedorMuneco">
-          <img src="/assets/img/Muñeco.png" alt="muneco" />
+        <div class="wrapperCopiar">
+            <div class="contenedorMuneco">
+              <img class="imagen1" src="/assets/img/Muñeco.png" alt="muneco" />
+              <div class="frameTextos">
+                <h3 id="textoACopiar">Ningun mensaje fue encontrado</h3>
+                <p>
+                  Ingresa el texto que desea encriptar o <br />
+                  desencriptar
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Textos -->
+
+          <!-- BotonCopiar -->
+   
+        
+          </div>
+          
         </div>
-        <!-- textoEncriptado -->
-        <textarea
-          class="text-area"
-          id="textoSalida"
-          cols="50"
-          rows="12"
-        ></textarea>
-        <!-- Textos -->
-        <div class="frameTextos">
-          <h3>Ningun mensaje fue encontrado</h3>
-          <p>
-            Ingresa el texto que desea encriptar o <br />
-            desencriptar
-          </p>
-        </div>
-        <!-- BotonCopiar -->
-        <div class="contenedorr-copiar">
-          <button onclick="btnCopiar()" id="btn-copiar">Copiar</button>
+        <button class="btnCopiar" onclick="btnCopiar()" id="btn-copiar">
+          Copiar
+        </button>
+        <div class="wrapper-resultado">
+          <p class="textoResultado"></p>
         </div>
       </section>
     </main>

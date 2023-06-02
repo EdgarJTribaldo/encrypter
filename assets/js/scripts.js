@@ -33,8 +33,8 @@ fenterlimescimesdaidenters poberr enternfrenterntair enterstenter dentersaifimes
 
 
 const textoOriginal = document.getElementById("textoEntrada");
-const clave = document.getElementById("textoSalida");
 const mensaje = document.getElementById('mensaje'); // Obtén el elemento del mensaje
+const textoAcopiar = document.getElementById('textoACopiar');
 
 
 function btnEncriptar(){
@@ -47,18 +47,18 @@ function btnEncriptar(){
         textoOriginal.classList.remove('rojo');
       }
     const textoEncriptado = encriptar(textoOriginal.value);
-    clave.value = textoEncriptado;
+    textoAcopiar.innerText = textoEncriptado;
     textoOriginal.value = "";
 }
 
 function btnDesencriptar(){
-    const textoDesencriptado = Desencriptar(textoOriginal.value);   
-    clave.value = textoDesencriptado;
+    const textoDesencriptado = Desencriptar(textoAcopiar.innerHTML);   
+    textoAcopiar.innerHTML = textoDesencriptado;
     textoOriginal.value = "";
 }
 
 function btnCopiar(){
-    const textoCopiado = clave.value;
+    const textoCopiado = textoAcopiar.innerText;
     this.value = textoCopiado;
     textoOriginal.value = this.value;
 }
